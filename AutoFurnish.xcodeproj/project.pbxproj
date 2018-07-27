@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043739E6210A44FA00BD6BA0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043739E5210A44FA00BD6BA0 /* Reachability.swift */; };
+		043739E8210A49FF00BD6BA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043739E7210A49FF00BD6BA0 /* Images.xcassets */; };
 		0451D67320E885EA0006DE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451D67220E885EA0006DE71 /* AppDelegate.swift */; };
 		0451D67520E885EA0006DE71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451D67420E885EA0006DE71 /* ViewController.swift */; };
 		0451D67820E885EA0006DE71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0451D67620E885EA0006DE71 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043739E5210A44FA00BD6BA0 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		043739E7210A49FF00BD6BA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0451D66F20E885EA0006DE71 /* AutoFurnish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoFurnish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0451D67220E885EA0006DE71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0451D67420E885EA0006DE71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,10 +60,12 @@
 			children = (
 				0451D67220E885EA0006DE71 /* AppDelegate.swift */,
 				0451D67420E885EA0006DE71 /* ViewController.swift */,
+				043739E5210A44FA00BD6BA0 /* Reachability.swift */,
 				0451D67620E885EA0006DE71 /* Main.storyboard */,
 				0451D67920E885EA0006DE71 /* Assets.xcassets */,
 				0451D67B20E885EA0006DE71 /* LaunchScreen.storyboard */,
 				0451D67E20E885EA0006DE71 /* Info.plist */,
+				043739E7210A49FF00BD6BA0 /* Images.xcassets */,
 			);
 			path = AutoFurnish;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0451D67D20E885EA0006DE71 /* LaunchScreen.storyboard in Resources */,
+				043739E8210A49FF00BD6BA0 /* Images.xcassets in Resources */,
 				0451D67A20E885EA0006DE71 /* Assets.xcassets in Resources */,
 				0451D67820E885EA0006DE71 /* Main.storyboard in Resources */,
 			);
@@ -138,6 +145,7 @@
 			files = (
 				0451D67520E885EA0006DE71 /* ViewController.swift in Sources */,
 				0451D67320E885EA0006DE71 /* AppDelegate.swift in Sources */,
+				043739E6210A44FA00BD6BA0 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V5TAAW86C9;
 				INFOPLIST_FILE = AutoFurnish/Info.plist;
@@ -293,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V5TAAW86C9;
 				INFOPLIST_FILE = AutoFurnish/Info.plist;
