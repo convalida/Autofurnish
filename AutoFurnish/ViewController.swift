@@ -36,21 +36,20 @@ class ViewController: UIViewController {
         let myURL = URL(string:"https://www.autofurnish.com/")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
+        webView.allowsBackForwardNavigationGestures = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
 
 extension ViewController: WKNavigationDelegate {
     // Gets called if webView cant handle URL
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        print(navigationAction.request.url?.scheme)
+        
         switch navigationAction.request.url?.scheme {
         case "mailto"?:
             if let url = navigationAction.request.url {
@@ -70,7 +69,20 @@ extension ViewController: WKNavigationDelegate {
         default:
             decisionHandler(.allow)
         }
+      
+        if navigationAction.navigationType == .linkActivated {
+            if let url = navigationAction.request.url, let host = url.host, !host.hasPrefix("www.autofurnish.com") {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(navigationAction.request.url!, options: [:])
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            } else{
+                //decisionHandler(.allow)
+            }
+        }
     }
+    
 }
 
 extension ViewController: MFMailComposeViewControllerDelegate {
