@@ -49,6 +49,14 @@ class ViewController: UIViewController {
 extension ViewController: WKNavigationDelegate {
     // Gets called if webView cant handle URL
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if let reachability = Reachability.init() {
+            if  !reachability.isReachable {            
+                self.showNotReachableAlert();
+                decisionHandler(.cancel)
+                return
+            }
+            
+        }
         
         switch navigationAction.request.url?.scheme {
         case "mailto"?:
@@ -83,6 +91,17 @@ extension ViewController: WKNavigationDelegate {
         }
     }
     
+    
+    func showNotReachableAlert(){
+        let notReachableAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            
+        }
+        notReachableAlert.addAction(okAction)
+//        DispatchQueue.function()
+        present(notReachableAlert, animated: true, completion: nil)
+    }
 }
 
 extension ViewController: MFMailComposeViewControllerDelegate {
