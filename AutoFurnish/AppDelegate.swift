@@ -15,9 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        RunLoop.current.run(until: NSDate(timeIntervalSinceNow: 5) as Date)
         // Override point for customization after application launch.
         URLSession.shared.dataTask(with: URL(string: "http://itechnodev.com/api/articles/all.json")!) { (dsata, response, error) in
-            print(response)
+            //print(response)
         }.resume()
         return true
     }

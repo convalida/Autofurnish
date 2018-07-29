@@ -16,8 +16,11 @@ class ViewController: UIViewController {
     
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
-        webConfiguration.dataDetectorTypes = [.all]
-        
+        if #available(iOS 10.0, *) {
+            webConfiguration.dataDetectorTypes = [.all]
+        } else {
+            // Fallback on earlier versions
+        }
         
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
