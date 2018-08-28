@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,59 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoFurnish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w5R-aN-rHo">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPw-4a-eqb">
+                                <rect key="frame" x="-0.66666666666665719" y="44" width="375.33333333333326" height="734"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_1024x768" translatesAutoresizingMaskIntoConstraints="NO" id="ZOv-I9-Q56">
+                                        <rect key="frame" x="59.666666666666657" y="271" width="255.99999999999997" height="192"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="256" id="oJJ-8j-WE6"/>
+                                            <constraint firstAttribute="height" constant="192" id="r3W-tb-ZfM"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.019607843137254902" green="0.1803921568627451" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ZOv-I9-Q56" firstAttribute="centerY" secondItem="MPw-4a-eqb" secondAttribute="centerY" id="H3L-p8-yC7"/>
+                                    <constraint firstItem="ZOv-I9-Q56" firstAttribute="centerX" secondItem="MPw-4a-eqb" secondAttribute="centerX" id="MN2-hz-3bR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.019607843137254902" green="0.1803921568627451" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w5R-aN-rHo" firstAttribute="leading" secondItem="cKy-nz-Knm" secondAttribute="leading" id="GIU-HR-M9M"/>
+                            <constraint firstItem="MPw-4a-eqb" firstAttribute="centerY" secondItem="w5R-aN-rHo" secondAttribute="centerY" id="W4D-A1-BLt"/>
+                            <constraint firstItem="w5R-aN-rHo" firstAttribute="top" secondItem="cKy-nz-Knm" secondAttribute="top" id="Wun-HG-4Ig"/>
+                            <constraint firstItem="MPw-4a-eqb" firstAttribute="height" secondItem="w5R-aN-rHo" secondAttribute="height" id="dp3-PP-yEa"/>
+                            <constraint firstItem="MPw-4a-eqb" firstAttribute="width" secondItem="w5R-aN-rHo" secondAttribute="width" id="g6m-kj-eI1"/>
+                            <constraint firstItem="MPw-4a-eqb" firstAttribute="centerX" secondItem="w5R-aN-rHo" secondAttribute="centerX" id="hSw-pb-JWk"/>
+                            <constraint firstItem="cKy-nz-Knm" firstAttribute="trailing" secondItem="w5R-aN-rHo" secondAttribute="trailing" id="s4W-6m-W9d"/>
+                            <constraint firstItem="cKy-nz-Knm" firstAttribute="bottom" secondItem="w5R-aN-rHo" secondAttribute="bottom" id="zi8-mK-FAT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cKy-nz-Knm"/>
                     </view>
+                    <connections>
+                        <outlet property="imgLogo" destination="ZOv-I9-Q56" id="bEw-Sn-yvl"/>
+                        <outlet property="splashView" destination="MPw-4a-eqb" id="ige-M3-ZvH"/>
+                        <outlet property="viewWeb" destination="w5R-aN-rHo" id="fhM-ep-yHw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="37.684729064039409"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo_1024x768" width="1024" height="768"/>
+    </resources>
 </document>

@@ -13,6 +13,8 @@
 		0451D67820E885EA0006DE71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0451D67620E885EA0006DE71 /* Main.storyboard */; };
 		0451D67A20E885EA0006DE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0451D67920E885EA0006DE71 /* Assets.xcassets */; };
 		0451D67D20E885EA0006DE71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0451D67B20E885EA0006DE71 /* LaunchScreen.storyboard */; };
+		2B93BC00213475BF002FBFF4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B93BBFF213475BF002FBFF4 /* Default-568h@2x.png */; };
+		2BFBC6D4211707FC00DF9A9D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFBC6D3211707FC00DF9A9D /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0451D67920E885EA0006DE71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0451D67C20E885EA0006DE71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0451D67E20E885EA0006DE71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B93BBFF213475BF002FBFF4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2BFBC6D3211707FC00DF9A9D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		0451D66620E885EA0006DE71 = {
 			isa = PBXGroup;
 			children = (
+				2B93BBFF213475BF002FBFF4 /* Default-568h@2x.png */,
 				0451D67120E885EA0006DE71 /* AutoFurnish */,
 				0451D67020E885EA0006DE71 /* Products */,
 			);
@@ -63,6 +68,7 @@
 				0451D67920E885EA0006DE71 /* Assets.xcassets */,
 				0451D67B20E885EA0006DE71 /* LaunchScreen.storyboard */,
 				0451D67E20E885EA0006DE71 /* Info.plist */,
+				2BFBC6D3211707FC00DF9A9D /* UIView.swift */,
 			);
 			path = AutoFurnish;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0451D67D20E885EA0006DE71 /* LaunchScreen.storyboard in Resources */,
+				2B93BC00213475BF002FBFF4 /* Default-568h@2x.png in Resources */,
 				0451D67A20E885EA0006DE71 /* Assets.xcassets in Resources */,
 				0451D67820E885EA0006DE71 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BFBC6D4211707FC00DF9A9D /* UIView.swift in Sources */,
 				0451D67520E885EA0006DE71 /* ViewController.swift in Sources */,
 				0451D67320E885EA0006DE71 /* AppDelegate.swift in Sources */,
 				043739E6210A44FA00BD6BA0 /* Reachability.swift in Sources */,
@@ -282,13 +290,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V5TAAW86C9;
+				DEVELOPMENT_TEAM = K8UU8WZKUP;
 				INFOPLIST_FILE = AutoFurnish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tutist.AutoFurnish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.convalida.autofurnish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,13 +306,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V5TAAW86C9;
+				DEVELOPMENT_TEAM = K8UU8WZKUP;
 				INFOPLIST_FILE = AutoFurnish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tutist.AutoFurnish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.convalida.autofurnish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

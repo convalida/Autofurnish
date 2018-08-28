@@ -16,11 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        RunLoop.current.run(until: NSDate(timeIntervalSinceNow: 5) as Date)
-        // Override point for customization after application launch.
-        URLSession.shared.dataTask(with: URL(string: "http://itechnodev.com/api/articles/all.json")!) { (dsata, response, error) in
-            //print(response)
-        }.resume()
+        
+        //    UIColor.init(red: 5, green: 46, blue: 69, alpha: 1.0)
         return true
     }
 
@@ -36,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        print("App Entered Foreground")
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
