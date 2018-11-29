@@ -18,26 +18,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var splashView: UIView!
     
     var isFirstTimeLoad:Bool = true
-
-//    override func loadView() {
-//        let webConfiguration = WKWebViewConfiguration()
-//        if #available(iOS 10.0, *) {
-//            webConfiguration.dataDetectorTypes = [.all]
-//        } else {
-//            // Fallback on earlier versions
-//        }
-//
-//        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-//        webView.uiDelegate = self
-//        webView.navigationDelegate = self
-//        view = webView
-//    }
-    
-    
-    
     
     override var prefersStatusBarHidden: Bool {
-        return true
+        return false
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     override func viewDidLoad() {
