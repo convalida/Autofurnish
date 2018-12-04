@@ -10,23 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AutoFurnish/ViewController.swift"
-            timestampString = "564116674.637799"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AutoFurnish/ViewController.swift"
-            timestampString = "564116674.722913"
+            timestampString = "565648604.881635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "171"
@@ -42,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AutoFurnish/ViewController.swift"
-            timestampString = "564116674.7230231"
+            timestampString = "565648604.8820159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -54,61 +38,61 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "AutoFurnish.ViewController.splashView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIView&gt;"
+                  symbolName = "AutoFurnish.ViewController.splashView.getter : weak Swift.Optional&lt;__C.UIView&gt;"
                   moduleName = "AutoFurnish"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/ViewController.swift"
-                  timestampString = "557088945.552644"
+                  timestampString = "565648605.2028871"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "79">
+                  offsetFromSymbolStart = "96">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "AutoFurnish.ViewController.splashView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIView&gt;"
+                  symbolName = "AutoFurnish.ViewController.splashView.setter : weak Swift.Optional&lt;__C.UIView&gt;"
                   moduleName = "AutoFurnish"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/ViewController.swift"
-                  timestampString = "557088945.55462"
+                  timestampString = "565648605.205373"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "90">
+                  offsetFromSymbolStart = "112">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "AutoFurnish.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; AutoFurnish.ViewController"
+                  symbolName = "AutoFurnish.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; AutoFurnish.ViewController"
                   moduleName = "AutoFurnish"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/ViewController.swift"
-                  timestampString = "557088945.556311"
+                  timestampString = "565648605.207788"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "496">
+                  offsetFromSymbolStart = "332">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "AutoFurnish.ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;AutoFurnish.ViewController&gt;"
+                  symbolName = "AutoFurnish.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;AutoFurnish.ViewController&gt;"
                   moduleName = "AutoFurnish"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/ViewController.swift"
-                  timestampString = "557088945.5580389"
+                  timestampString = "565648605.210163"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "405">
+                  offsetFromSymbolStart = "308">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -120,12 +104,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AutoFurnish/ViewController.swift"
-            timestampString = "564116674.723097"
+            timestampString = "565648604.882269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutoFurnish/ViewController.swift"
+            timestampString = "565648604.882519"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutoFurnish/ViewController.swift"
+            timestampString = "565648604.882755"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -125,7 +125,7 @@ extension ViewController: WKNavigationDelegate {
         if navigationAction.navigationType == .linkActivated {
             if let url = navigationAction.request.url, let host = url.host
                  {
-                    if (host.range(of: "www.convalidatech.com") != nil) {
+                    if (host.range(of: "www.convalidatech.com") != nil || host.range(of: "www.facebook.com") != nil || host.range(of: "twitter.com") != nil || host.range(of: "plus.google.com") != nil || host.range(of: "www.instagram.com") != nil || host.range(of: "www.youtube.com") != nil || host.range(of: "play.google.com") != nil || host.range(of: "itunes.apple.com") != nil) {
                         loadUrl(url: url)
                     }
             } else {
