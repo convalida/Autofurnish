@@ -10,23 +10,40 @@ import UIKit
 import WebKit
 import MessageUI
 
+///Main view controller class for displaying web view. Rajat ji please check this
 class ViewController: UIViewController {
 
+    ///Instantiate WKWebView which is pre defined class for displaying web content
     var webView: WKWebView!
+    /**
+ Instantiate outlet for UIView class which is pre defined class which manages content for rectangular are on screen
+ */
     @IBOutlet weak var viewWeb: UIView!
+    ///Instantiate outlet for UIImageView class which is pre defined class for dispaying single image. Used to display logo on splash screen. Rajat ji please check
     @IBOutlet weak var imgLogo: UIImageView!
+    ///Instantiate outlet for UIView class. It is used to display splash screen, Rajat ji kindly check
     @IBOutlet weak var splashView: UIView!
     
+    ///Boolean to check if home page is loaded for first time.
     var isFirstTimeLoad:Bool = true
     
+    ///Display status bar
     override var prefersStatusBarHidden: Bool {
         return false
     }
     
+    ///Set style of status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
     
+    /**
+ Life cycle method called after view is loaded.
+     Initialize WKWebViewConfiguration() which is pre defined class for collection of properties used to initialize a web view.
+     For iOS versions 10 and above, set data detection to add interactivity to web content to all data types turned into links when detected.
+     Set width and height of web view to width and height of rectangle. Rajat ji please check this.
+     Set webview with with frame and configuration of webview, user interface and navigation delegate to self
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         let webConfiguration = WKWebViewConfiguration()
