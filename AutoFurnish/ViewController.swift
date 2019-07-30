@@ -19,9 +19,9 @@ class ViewController: UIViewController {
  Instantiate outlet for UIView class which is pre defined class which manages content for rectangular are on screen
  */
     @IBOutlet weak var viewWeb: UIView!
-    ///Instantiate outlet for UIImageView class which is pre defined class for dispaying single image. Used to display logo on splash screen. Rajat ji please check
+    ///Outlet for logo on splash screen.
     @IBOutlet weak var imgLogo: UIImageView!
-    ///Instantiate outlet for UIView class. It is used to display splash screen, Rajat ji kindly check
+    ///Outlet for splash screen.
     @IBOutlet weak var splashView: UIView!
     
     ///Boolean to check if home page is loaded for first time.
@@ -41,8 +41,13 @@ class ViewController: UIViewController {
  Life cycle method called after view is loaded.
      Initialize WKWebViewConfiguration() which is pre defined class for collection of properties used to initialize a web view.
      For iOS versions 10 and above, set data detection to add interactivity to web content to all data types turned into links when detected.
-     Set width and height of web view to width and height of rectangle. Rajat ji please check this.
-     Set webview with with frame and configuration of webview, user interface and navigation delegate to self
+     Set width and height of web view to width and height of superview.
+     Set webview with with frame and configuration of webview, user interface and navigation delegate to self.
+     Set auto resizing mask not translated into AutoLayout constraints, then insert web view as sub view.
+     Set horizontal, vertical, width and height constraint of web view and add the constraints.
+     Load home page url of autofurnish website.
+     Set custom user agent to web view.
+     Add horizontal swipe gestures will trigger back-forward list navigations
      */
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,11 +88,17 @@ class ViewController: UIViewController {
         webView.allowsBackForwardNavigationGestures = true
     }
     
+    /**
+ Called before the view is loaded. Hide the navigation bar
+     */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    /**
+ Called when the view is about to disappear. Display navigation bar. Rajat ji please check this as navigation bar is used from webview
+ */
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
@@ -106,12 +117,16 @@ class ViewController: UIViewController {
 //        }
 //    }
     
+    /**
+ Load autofurnish web url inside webview
+     */
     func loadHomeUrl(){
         let myURL = URL(string:"https://www.autofurnish.com/")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
 
+     /// Dispose off any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -120,7 +135,13 @@ class ViewController: UIViewController {
 
 
 extension ViewController: WKNavigationDelegate {
-    // Gets called if webView cant handle URL
+    /**
+     Gets called if webView cannot handle URL.
+     Show alert displaying internet connection is required using Reachability class, when this alert is show - Rajat ji please update this.
+     If url has "mailto" text, do not initialize components of url. Rajat ji please check this.
+     Call configuredMailComposeViewController method and pass the email. If current device can send email, then display mail controller else show alert with message and cancel button.
+     If link is with href url, if url is navigation request url, and navigation url is google plus, youtube, etc., then open link in appropriate app, if navigation url is facebook, load request that is independent of protocol or URL scheme (to resolve an issue) else set decision handler to allow
+     */
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let reachability = Reachability.init() {
             if  !reachability.isReachable {
@@ -165,6 +186,9 @@ extension ViewController: WKNavigationDelegate {
         decisionHandler(.allow)
     }
     
+    /**
+ Called when the navigation is complete. If webview is loaded for first time, remove splash screen and set isFirstTimeLoaded to false. Print loaded in logs
+     */
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if isFirstTimeLoad == true {
             splashView.removeFromSuperview();
@@ -173,6 +197,9 @@ extension ViewController: WKNavigationDelegate {
         print("loaded")
     }
     
+    /**
+ Set title and message to alert to be displayed if internet is not connected to device with retry button. If webview is loaded for first time, display alert, else load url for home page. Rajat ji please check and update this as in app, on click of retry button, same page is re loaded when internet is turned on
+     */
     func showNotReachableAlert(){
         let notReachableAlert = UIAlertController(title: "Internet connection is required", message: "Please check your internet connection and try again.", preferredStyle: .alert)
         
@@ -194,7 +221,7 @@ extension ViewController: WKNavigationDelegate {
     }
     
     /**
-     Loads a url
+     Loads a url. If the specified URL scheme is handled by another app, iOS launches that app and passes the URL to it. openURL was deprecated in iOS 10, so open method is used
     */
     func loadUrl(url:URL){
         if #available(iOS 10.0, *) {
@@ -206,6 +233,10 @@ extension ViewController: WKNavigationDelegate {
 }
 
 extension ViewController: MFMailComposeViewControllerDelegate {
+    /**
+ Display a standard interface for managing, editing, and sending an email message.
+     Set mail composition view controller’s delegate to self. Set the initial recipients to include in the email’s “To” field to email id passed in link
+     */
     func configuredMailComposeViewController(email:String) -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
@@ -217,8 +248,12 @@ extension ViewController: MFMailComposeViewControllerDelegate {
         return mailComposerVC
     }
     
+    /**
+     Message to be displayed in alert if email could not be sent from device with ok button
+     */
     func showSendMailErrorAlert() {
         
+       
         let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
@@ -230,7 +265,9 @@ extension ViewController: MFMailComposeViewControllerDelegate {
         sendMailErrorAlert.show(self, sender: nil)
     }
     
-    // MARK: MFMailComposeViewControllerDelegate Method
+    /**
+ MFMailComposeViewControllerDelegate method. When the mail composition interface is dismissed, dismiss the controller for mail.
+ */
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
