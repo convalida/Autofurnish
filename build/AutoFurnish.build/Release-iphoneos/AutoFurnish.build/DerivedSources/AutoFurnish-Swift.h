@@ -186,32 +186,89 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @class UIWindow;
 @class UIApplication;
 
+/// Default class with pre defined life cycle methods of application.
 SWIFT_CLASS("_TtC11AutoFurnish11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+/// Windows work with your view controllers to handle events and to perform many other tasks that are fundamental to your app’s operation. UIKit handles most window-related interactions, working with other objects as needed to implement many app behaviors.
 @property (nonatomic, strong) UIWindow * _Nullable window;
+/// Called when application is launched for first time. Override point for customization after application launch. Tells the delegate that the launch process is almost done and the app is almost ready to run.
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions SWIFT_WARN_UNUSED_RESULT;
+/// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+/// Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
+/// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+/// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 - (void)applicationDidEnterBackground:(UIApplication * _Nonnull)application;
+/// Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
+/// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
+/// Called when the application is about to terminate. Save data if appropriate.
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIWebView;
+@class NSBundle;
+@class NSCoder;
+
+/// Not used.
+SWIFT_CLASS("_TtC11AutoFurnish10OpenLinkVC")
+@interface OpenLinkVC : UIViewController
+/// Outlet for webview
+@property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified webView;
+/// Life cycle method called after view is loaded.
+/// Set delegate of web view to self. Not used
+- (void)viewDidLoad;
+/// Called before the view is loaded, display navigation bar, not used
+- (void)viewWillAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface OpenLinkVC (SWIFT_EXTENSION(AutoFurnish)) <UIWebViewDelegate>
+/// Sent after a web view starts loading a frame. Show hud view. Not used. Not used
+- (void)webViewDidStartLoad:(UIWebView * _Nonnull)webView;
+/// Sent after a web view finishes loading a frame. Hide the hud view. Not used
+- (void)webViewDidFinishLoad:(UIWebView * _Nonnull)webView;
+/// Sent if a web view failed to load a frame. Display message in logs. Not used
+- (void)webView:(UIWebView * _Nonnull)webView didFailLoadWithError:(NSError * _Nonnull)error;
 @end
 
 
 
 @class UIImageView;
-@class NSBundle;
-@class NSCoder;
 
+/// Root view controller class for displaying web view.
 SWIFT_CLASS("_TtC11AutoFurnish14ViewController")
 @interface ViewController : UIViewController
+/// Instantiate outlet for UIView class which is pre defined class which manages content for rectangular are on screen
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified viewWeb;
+/// Outlet for logo on splash screen.
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imgLogo;
+/// Outlet for splash screen.
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified splashView;
+/// Display status bar
 @property (nonatomic, readonly) BOOL prefersStatusBarHidden;
+/// Set style of status bar
 @property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
+/// Life cycle method called after view is loaded.
+/// Initialize WKWebViewConfiguration() which is pre defined class for collection of properties used to initialize a web view.
+/// For iOS versions 10 and above, set data detection to add interactivity to web content to all data types turned into links when detected.
+/// Set width and height of web view to width and height of superview.
+/// Set webview with with frame and configuration of webview, user interface and navigation delegate to self.
+/// Set auto resizing mask not translated into AutoLayout constraints, then insert web view as sub view.
+/// Set horizontal, vertical, width and height constraint of web view and add the constraints.
+/// Load home page url of autofurnish website.
+/// Set custom user agent to web view.
+/// Add horizontal swipe gestures will trigger back-forward list navigations
 - (void)viewDidLoad;
+/// Called before the view is loaded. Hide the navigation bar
+- (void)viewWillAppear:(BOOL)animated;
+/// Called when the view is about to disappear. Display navigation bar. We are using NavigationViewController so navigation bar is set to visible for webview when the view is about to disappear
+- (void)viewWillDisappear:(BOOL)animated;
+/// Dispose off any resources that can be recreated.
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -224,6 +281,7 @@ SWIFT_CLASS("_TtC11AutoFurnish14ViewController")
 @class MFMailComposeViewController;
 
 @interface ViewController (SWIFT_EXTENSION(AutoFurnish)) <MFMailComposeViewControllerDelegate>
+/// MFMailComposeViewControllerDelegate method. When the mail composition interface is dismissed, dismiss the controller for mail.
 - (void)mailComposeController:(MFMailComposeViewController * _Nonnull)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError * _Nullable)error;
 @end
 
@@ -232,7 +290,12 @@ SWIFT_CLASS("_TtC11AutoFurnish14ViewController")
 @class WKNavigation;
 
 @interface ViewController (SWIFT_EXTENSION(AutoFurnish)) <WKNavigationDelegate>
+/// Gets called if webView cannot handle URL.
+/// Check if internet is not connected (using Reachability class which is a pre defined class), call showNotReachableAlert method which displays message that internet is not connected and retry to retry loading the page when internet is connected and also cancel button to stay on same page.
+/// If url has “mailto” scheme, get components of url and get the path of sub component. Call configuredMailComposeViewController method and pass the email thus obtained. If current device can send email, then call configuredMailComposeViewController method and pass email components which displays mail composer else show alert with message and cancel button.
+/// If link is with href url, if url is navigation request url, and navigation url is google plus, youtube, etc., then open link in appropriate app, if navigation url is facebook, load request that is independent of protocol or URL scheme (to resolve an issue) else set decision handler to allow
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
+/// Called when the navigation is complete. If webview is loaded for first time, remove splash screen and set isFirstTimeLoaded to false. Print loaded in logs
 - (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
 @end
 

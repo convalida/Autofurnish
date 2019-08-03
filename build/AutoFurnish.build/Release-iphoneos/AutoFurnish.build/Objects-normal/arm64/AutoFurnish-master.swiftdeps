@@ -1,8 +1,9 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "f6d365e79d482320182ac842753c1d59"
-build_time: [1542424481, 868606000]
+options: "9f61c22a9583e9bb984fa6aced255581"
+build_time: [1564821301, 249050000]
 inputs:
-  "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/UIView.swift": [9223372036, 854775807]
-  "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/ViewController.swift": [9223372036, 854775807]
-  "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/AppDelegate.swift": [9223372036, 854775807]
-  "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift": [9223372036, 854775807]
+  "/Users/minakshisadana/Desktop/autofurnish-new/AutoFurnish/UIView.swift": [9223372036, 854775807]
+  "/Users/minakshisadana/Desktop/autofurnish-new/AutoFurnish/ViewController.swift": [9223372036, 854775807]
+  "/Users/minakshisadana/Desktop/autofurnish-new/AutoFurnish/OpenLinkVC.swift": [9223372036, 854775807]
+  "/Users/minakshisadana/Desktop/autofurnish-new/AutoFurnish/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/minakshisadana/Desktop/autofurnish-new/AutoFurnish/Reachability.swift": [9223372036, 854775807]
