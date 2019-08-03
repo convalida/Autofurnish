@@ -98,7 +98,7 @@ class ViewController: UIViewController {
     }
     
     /**
-     Called when the view is about to disappear. Display navigation bar. We are using NavigationViewController so Navigation Bar is set to hidden for webview.
+     Called when the view is about to disappear. Display navigation bar. We are using NavigationViewController so navigation bar is set to visible for webview when the view is about to disappear
      */
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -138,8 +138,8 @@ class ViewController: UIViewController {
 extension ViewController: WKNavigationDelegate {
     /**
      Gets called if webView cannot handle URL.
-     Show alert displaying internet connection is required using Reachability class. This alert has a retry button for user to retry loading the page when internet connection is available
-     If url has "mailto" text then we display a mail composer to user. Call configuredMailComposeViewController method and pass the email. If current device can send email, then display mail controller else show alert with message and cancel button.
+     Check if internet is not connected (using Reachability class which is a pre defined class), call showNotReachableAlert method which displays message that internet is not connected and retry to retry loading the page when internet is connected and also cancel button to stay on same page.
+     If url has "mailto" scheme, get components of url and get the path of sub component. Call configuredMailComposeViewController method and pass the email thus obtained. If current device can send email, then call configuredMailComposeViewController method and pass email components which displays mail composer else show alert with message and cancel button.
      If link is with href url, if url is navigation request url, and navigation url is google plus, youtube, etc., then open link in appropriate app, if navigation url is facebook, load request that is independent of protocol or URL scheme (to resolve an issue) else set decision handler to allow
      */
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -198,7 +198,7 @@ extension ViewController: WKNavigationDelegate {
     }
     
     /**
-     Set title and message to alert to be displayed if internet is not connected to device with retry button. If webview is loaded for first time, display alert, else load url for home page. If it is not first time then the current page is reloaded again, on click of retry button when internet is turned on
+     Called when the internet is not connected. Set title and message to alert to be displayed if internet is not connected to device with retry button. On click of Retry button, if webview is loaded for first time, check again if internet is not connected, display alert again, else load url for home page. If it is not first time then the current page is reloaded again
      */
     func showNotReachableAlert(){
         let notReachableAlert = UIAlertController(title: "Internet connection is required", message: "Please check your internet connection and try again.", preferredStyle: .alert)

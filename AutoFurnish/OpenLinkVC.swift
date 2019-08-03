@@ -8,7 +8,7 @@
 
 import UIKit
 
-///This is not getting called anywhere in the project right now. 
+///Not used. 
 class OpenLinkVC: UIViewController {
 
     ///Instantiate url
@@ -22,7 +22,7 @@ class OpenLinkVC: UIViewController {
     
     /**
      Life cycle method called after view is loaded.
-     Set delegate of web view to self.
+     Set delegate of web view to self. Not used
      */
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ class OpenLinkVC: UIViewController {
     }
     
     /**
-     Called before the view is loaded, display navigation bar, please check as navigation bar is not displayed in app
+     Called before the view is loaded, display navigation bar, not used
      */
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
@@ -49,7 +49,7 @@ class OpenLinkVC: UIViewController {
 
 extension OpenLinkVC:UIWebViewDelegate {
     /**
-     Sent after a web view starts loading a frame. Show hud view
+     Sent after a web view starts loading a frame. Show hud view. Not used. Not used
      */
     func webViewDidStartLoad(_ webView: UIWebView) {
         DispatchQueue.main.async {
@@ -58,7 +58,7 @@ extension OpenLinkVC:UIWebViewDelegate {
     }
     
     /**
-     Sent after a web view finishes loading a frame. Hide the hud view
+     Sent after a web view finishes loading a frame. Hide the hud view. Not used
      */
     func webViewDidFinishLoad(_ webView: UIWebView) {
         DispatchQueue.main.async {
@@ -67,7 +67,7 @@ extension OpenLinkVC:UIWebViewDelegate {
     }
     
     /**
-     Sent if a web view failed to load a frame. Display message in logs
+     Sent if a web view failed to load a frame. Display message in logs. Not used
      */
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         print("Unable to loaD:\(error.localizedDescription)")

@@ -26,7 +26,7 @@ extension UIView {
     }
     
     /**
-     Set safe area of bottom anchor to bottom edge of the view’s frame. Different return types depending on different version of iOS
+     Set safe area of bottom anchor to bottom edge of the view’s frame. Different return types depending on different version of iOS. Not used
      */
     var safeAreaBottomAnchor: NSLayoutYAxisAnchor {
         if #available(iOS 11.0, *) {
@@ -38,7 +38,7 @@ extension UIView {
     
     // Left Anchor
     /**
-     Set safe area of left anchor to left edge of the view’s frame. Different return types depending on different version of iOS
+     Set safe area of left anchor to left edge of the view’s frame. Different return types depending on different version of iOS. Not used
      */
     var safeAreaLeftAnchor: NSLayoutXAxisAnchor {
         if #available(iOS 11.0, *) {
@@ -50,7 +50,7 @@ extension UIView {
     
     // Right Anchor
     /**
-     Set safe area of right anchor to left edge of the view’s frame. Different return types depending on different version of iOS
+     Set safe area of right anchor to left edge of the view’s frame. Different return types depending on different version of iOS. Not used
      */
     var safeAreaRightAnchor: NSLayoutXAxisAnchor {
         if #available(iOS 11.0, *) {
