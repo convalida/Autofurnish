@@ -15,8 +15,8 @@ import UIKit
 extension UIView {
     
     /**
- Set safe area of top anchor to top edge of the view’s frame. Rajat ji please check this. Different return types depending on different version of iOS
- */
+     Set safe area of top anchor to top edge of the view’s frame. Not in use in this app
+     */
     var safeAreaTopAnchor: NSLayoutYAxisAnchor {
         if #available(iOS 11.0, *) {
             return self.safeAreaLayoutGuide.topAnchor

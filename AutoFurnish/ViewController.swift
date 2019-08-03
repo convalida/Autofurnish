@@ -10,14 +10,15 @@ import UIKit
 import WebKit
 import MessageUI
 
-///Main view controller class for displaying web view. Rajat ji please check this
+///Root view controller class for displaying web view.
 class ViewController: UIViewController {
 
     ///Instantiate WKWebView which is pre defined class for displaying web content
     var webView: WKWebView!
+    
     /**
- Instantiate outlet for UIView class which is pre defined class which manages content for rectangular are on screen
- */
+     Instantiate outlet for UIView class which is pre defined class which manages content for rectangular are on screen
+     */
     @IBOutlet weak var viewWeb: UIView!
     ///Outlet for logo on splash screen.
     @IBOutlet weak var imgLogo: UIImageView!
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     /**
- Life cycle method called after view is loaded.
+     Life cycle method called after view is loaded.
      Initialize WKWebViewConfiguration() which is pre defined class for collection of properties used to initialize a web view.
      For iOS versions 10 and above, set data detection to add interactivity to web content to all data types turned into links when detected.
      Set width and height of web view to width and height of superview.
@@ -89,7 +90,7 @@ class ViewController: UIViewController {
     }
     
     /**
- Called before the view is loaded. Hide the navigation bar
+     Called before the view is loaded. Hide the navigation bar
      */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -97,8 +98,8 @@ class ViewController: UIViewController {
     }
     
     /**
- Called when the view is about to disappear. Display navigation bar. Rajat ji please check this as navigation bar is used from webview
- */
+     Called when the view is about to disappear. Display navigation bar. We are using NavigationViewController so Navigation Bar is set to hidden for webview.
+     */
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
@@ -118,7 +119,7 @@ class ViewController: UIViewController {
 //    }
     
     /**
- Load autofurnish web url inside webview
+     Load autofurnish web url inside webview
      */
     func loadHomeUrl(){
         let myURL = URL(string:"https://www.autofurnish.com/")
@@ -137,9 +138,8 @@ class ViewController: UIViewController {
 extension ViewController: WKNavigationDelegate {
     /**
      Gets called if webView cannot handle URL.
-     Show alert displaying internet connection is required using Reachability class, when this alert is show - Rajat ji please update this.
-     If url has "mailto" text, do not initialize components of url. Rajat ji please check this.
-     Call configuredMailComposeViewController method and pass the email. If current device can send email, then display mail controller else show alert with message and cancel button.
+     Show alert displaying internet connection is required using Reachability class. This alert has a retry button for user to retry loading the page when internet connection is available
+     If url has "mailto" text then we display a mail composer to user. Call configuredMailComposeViewController method and pass the email. If current device can send email, then display mail controller else show alert with message and cancel button.
      If link is with href url, if url is navigation request url, and navigation url is google plus, youtube, etc., then open link in appropriate app, if navigation url is facebook, load request that is independent of protocol or URL scheme (to resolve an issue) else set decision handler to allow
      */
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -187,7 +187,7 @@ extension ViewController: WKNavigationDelegate {
     }
     
     /**
- Called when the navigation is complete. If webview is loaded for first time, remove splash screen and set isFirstTimeLoaded to false. Print loaded in logs
+     Called when the navigation is complete. If webview is loaded for first time, remove splash screen and set isFirstTimeLoaded to false. Print loaded in logs
      */
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if isFirstTimeLoad == true {
@@ -198,7 +198,7 @@ extension ViewController: WKNavigationDelegate {
     }
     
     /**
- Set title and message to alert to be displayed if internet is not connected to device with retry button. If webview is loaded for first time, display alert, else load url for home page. Rajat ji please check and update this as in app, on click of retry button, same page is re loaded when internet is turned on
+     Set title and message to alert to be displayed if internet is not connected to device with retry button. If webview is loaded for first time, display alert, else load url for home page. If it is not first time then the current page is reloaded again, on click of retry button when internet is turned on
      */
     func showNotReachableAlert(){
         let notReachableAlert = UIAlertController(title: "Internet connection is required", message: "Please check your internet connection and try again.", preferredStyle: .alert)
@@ -234,7 +234,7 @@ extension ViewController: WKNavigationDelegate {
 
 extension ViewController: MFMailComposeViewControllerDelegate {
     /**
- Display a standard interface for managing, editing, and sending an email message.
+     Display a standard interface for managing, editing, and sending an email message.
      Set mail composition view controller’s delegate to self. Set the initial recipients to include in the email’s “To” field to email id passed in link
      */
     func configuredMailComposeViewController(email:String) -> MFMailComposeViewController {
@@ -266,8 +266,8 @@ extension ViewController: MFMailComposeViewControllerDelegate {
     }
     
     /**
- MFMailComposeViewControllerDelegate method. When the mail composition interface is dismissed, dismiss the controller for mail.
- */
+     MFMailComposeViewControllerDelegate method. When the mail composition interface is dismissed, dismiss the controller for mail.
+     */
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
