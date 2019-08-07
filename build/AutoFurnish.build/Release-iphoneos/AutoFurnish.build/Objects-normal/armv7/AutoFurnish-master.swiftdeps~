@@ -1,0 +1,9 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "7715537f5169a63adb46982978cb3575"
+build_time: [1564821301, 248945000]
+inputs:
+  "/Users/minakshisadana/Desktop/autofurnish-new/AutoFurnish/UIView.swift": [9223372036, 854775807]
+  "/Users/minakshisadana/Desktop/autofurnish-new/AutoFurnish/ViewController.swift": [9223372036, 854775807]
+  "/Users/minakshisadana/Desktop/autofurnish-new/AutoFurnish/OpenLinkVC.swift": [9223372036, 854775807]
+  "/Users/minakshisadana/Desktop/autofurnish-new/AutoFurnish/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/minakshisadana/Desktop/autofurnish-new/AutoFurnish/Reachability.swift": [9223372036, 854775807]

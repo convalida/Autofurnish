@@ -1,0 +1,355 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 31,
+      "symbol": "ReachabilityError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 32,
+      "symbol": "ReachabilityError.FailedToCreateWithAddress(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 33,
+      "symbol": "ReachabilityError.FailedToCreateWithHostname(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 34,
+      "symbol": "ReachabilityError.UnableToSetCallback",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 35,
+      "symbol": "ReachabilityError.UnableToSetDispatchQueue",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 38,
+      "symbol": "ReachabilityChangedNotification",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 40,
+      "symbol": "callback(reachability:flags:info:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 51,
+      "symbol": "Reachability",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 53,
+      "symbol": "Reachability.NetworkReachable",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 54,
+      "symbol": "Reachability.NetworkUnreachable",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 56,
+      "symbol": "Reachability.NetworkStatus",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 58,
+      "symbol": "Reachability.NetworkStatus.notReachable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 58,
+      "symbol": "Reachability.NetworkStatus.reachableViaWWAN",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 58,
+      "symbol": "Reachability.NetworkStatus.reachableViaWiFi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 69,
+      "symbol": "Reachability.whenReachable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 70,
+      "symbol": "Reachability.whenUnreachable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 71,
+      "symbol": "Reachability.reachableOnWWAN",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 74,
+      "symbol": "Reachability.notificationCenter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 76,
+      "symbol": "Reachability.currentReachabilityString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 80,
+      "symbol": "Reachability.currentReachabilityStatus",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 93,
+      "symbol": "Reachability.previousFlags",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 95,
+      "symbol": "Reachability.isRunningOnDevice",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 103,
+      "symbol": "Reachability.notifierRunning",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 104,
+      "symbol": "Reachability.reachabilityRef",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 106,
+      "symbol": "Reachability.reachabilitySerialQueue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 108,
+      "symbol": "Reachability.init(reachabilityRef:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 113,
+      "symbol": "Reachability.init(hostname:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 120,
+      "symbol": "Reachability.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 133,
+      "symbol": "Reachability.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 142,
+      "symbol": "Reachability",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 145,
+      "symbol": "Reachability.startNotifier()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 169,
+      "symbol": "Reachability.stopNotifier()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 178,
+      "symbol": "Reachability.isReachable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 196,
+      "symbol": "Reachability.isReachableViaWWAN",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 201,
+      "symbol": "Reachability.isReachableViaWiFi",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 213,
+      "symbol": "Reachability.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 229,
+      "symbol": "Reachability",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 231,
+      "symbol": "Reachability.reachabilityChanged()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 245,
+      "symbol": "Reachability.isOnWWANFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 252,
+      "symbol": "Reachability.isReachableFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 255,
+      "symbol": "Reachability.isConnectionRequiredFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 258,
+      "symbol": "Reachability.isInterventionRequiredFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 261,
+      "symbol": "Reachability.isConnectionOnTrafficFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 264,
+      "symbol": "Reachability.isConnectionOnDemandFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 267,
+      "symbol": "Reachability.isConnectionOnTrafficOrDemandFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 270,
+      "symbol": "Reachability.isTransientConnectionFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 273,
+      "symbol": "Reachability.isLocalAddressFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 276,
+      "symbol": "Reachability.isDirectFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 279,
+      "symbol": "Reachability.isConnectionRequiredAndTransientFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tutistdev/Documents/ios/AutoFurnish/AutoFurnish/Reachability.swift",
+      "line": 283,
+      "symbol": "Reachability.reachabilityFlags",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/tutistdev/Documents/ios/AutoFurnish"
+}
