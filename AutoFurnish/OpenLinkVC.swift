@@ -14,7 +14,7 @@ class OpenLinkVC: UIViewController {
     ///Instantiate url
     var url:URL?
     
-    ///Instantiate web view
+    ///Instantiate hud view
     var HUD = MBProgressHUD()
     
     ///Outlet for webview
